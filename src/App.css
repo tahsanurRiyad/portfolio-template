@@ -1,0 +1,126 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #1e293b;
+  --light: #f8fafc;
+  --gray: #64748b;
+  --dark: #0f172a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+}
+
+
+
+
+/* animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  transform: translateX(-50px);
+}
+
+.slide-in-left.visible {
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  transform: translateX(50px);
+}
+
+.slide-in-right.visible {
+  transform: translateX(0);
+}
+
+/* Add section styling for proper scrolling */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Delay animations for staggered effect */
+.animate-delay-1 {
+  transition-delay: 0.1s !important;
+}
+
+.animate-delay-2 {
+  transition-delay: 0.2s !important;
+}
+
+.animate-delay-3 {
+  transition-delay: 0.3s !important;
+}
+
+.animate-delay-4 {
+  transition-delay: 0.4s !important;
+}
+
+/* Directional animations */
+.slide-in-left {
+  transform: translateX(-50px) !important;
+}
+
+.slide-in-left.visible {
+  transform: translateX(0) !important;
+}
+
+.slide-in-right {
+  transform: translateX(50px) !important;
+}
+
+.slide-in-right.visible {
+  transform: translateX(0) !important;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
